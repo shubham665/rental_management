@@ -1,0 +1,29 @@
+<div class="row mainContainer" *ngIf="subcategories.length===0">
+    <div class="col-md-3 subContainer" *ngFor="let category of categories">
+        <mat-card class="catalogCard">
+            <img mat-card-image src='{{ "assets/category/" + category.image }}' class="cardImage">
+            <mat-card-actions class="cardButton">
+                <button mat-raised-button color="primary" (click)="onCategoryClick(category.name)">{{category.name}}</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+<div *ngIf="subcategories.length!==0">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumbItem">
+            <li class="breadcrumb-item"><a href="javascript:void(0)" (click)="goToCategories()">Equipment Catalog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{selectedCategory}}</li>
+        </ol>
+    </nav>
+    <div class="row mainContainer">        
+        <div class="col-md-3 subContainer" *ngFor="let subcategory of subcategories">
+            <mat-card class="catalogCard">
+                <img mat-card-image src='{{ "assets/category/subcategory/" + subcategory.image }}' class="cardImage">
+                <mat-card-actions class="cardButton">
+                    <button mat-raised-button color="primary">{{subcategory.name}}</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

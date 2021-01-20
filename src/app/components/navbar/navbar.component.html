@@ -1,0 +1,22 @@
+<mat-toolbar>
+
+    <span>RENTAL MANAGEMENT SYSTEM</span>
+    
+    <span class="spacer"></span>
+    
+    <mat-form-field class="selectBox box1">
+      <mat-label>Select Location</mat-label>
+      <mat-select [(value)]="selectedLocation" (selectionChange)="onLocationChange($event)">
+        <mat-option value="{{option.name}}" *ngFor="let option of locations">{{ option.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="selectBox">
+      <mat-label>Select Branch</mat-label>
+      <mat-select [(value)]="selectedBranch" (selectionChange)="onBranchChange($event)">
+        <mat-option value="{{option.name}}" *ngFor="let option of branches">{{ option.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </mat-toolbar>
+  

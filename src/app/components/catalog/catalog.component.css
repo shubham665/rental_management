@@ -1,0 +1,26 @@
+.catalogCard {
+    height: 350px;
+    text-align: center;
+}
+
+.cardImage {
+    height: 280px;
+}
+
+.cardButton {
+    margin-top: -20px;
+}
+
+.mainContainer {
+    padding: 0px 20px 20px 20px;
+}
+
+.subContainer {
+    margin-top: 30px;
+}
+
+.breadcrumbItem {
+    background: none;
+    margin-top: 20px;
+    margin-left: 10px;
+}
